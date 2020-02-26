@@ -32,10 +32,10 @@ typedef struct MIDI_MERGER_T {
  * For use as a Jack-internal client, `jack_initialize()` and
  * `jack_finish()` have to be exported in the shared library.
  */
-JACK_LIB_EXPORT
+__attribute__ ((visibility("default")))
 int jack_initialize(jack_client_t* client, const char* load_init);
 
-JACK_LIB_EXPORT
+__attribute__ ((visibility("default")))
 void jack_finish(void* arg);
 
 #endif
